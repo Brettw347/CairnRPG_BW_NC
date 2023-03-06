@@ -12,5 +12,20 @@ public class Item {
         return "Item name: " + itemName + "Healing Power: " + healingPower;
     }
 
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public int getHealingPower() {
+        return healingPower;
+    }
+
+    public void setHealingPower(int healingPower) {
+        this.healingPower = healingPower;
+    }
 }
 
