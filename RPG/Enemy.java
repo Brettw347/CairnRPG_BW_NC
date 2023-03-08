@@ -1,13 +1,13 @@
 import java.util.Random;
 
 public class Enemy extends Character {
-    static int magicPower = 30;
+    int magicPower = 30;
     Enemy(String n, double h, double ap, boolean ia, int mp) {
         super(name, health, attackPower, isAlive);
         name = "Goblin";
     }
 
-    static boolean Fight() {
+    static boolean Fight(Hero h) {
         Random randI = new Random();
         int myRandInt = randI.nextInt(20);
         if (myRandInt <= 10) {
@@ -25,7 +25,7 @@ public class Enemy extends Character {
         return true;
     }
 
-    String info() {
+    static String info() {
         return "This class encompasses an enemy that the player fights. The class Enemy is a child of\n " +
                 "the character class and carries out the fighting action of the enemies.\n " +
                 "The enemy has a similar fighting method as the hero.\n " +
