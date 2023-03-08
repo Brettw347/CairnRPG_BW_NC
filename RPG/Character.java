@@ -21,7 +21,7 @@ public class Character {
             return false;
     }
 
-    String Info() {
+    static String Info() {
         return "Character Name: " + name + "Health: " + health + "Attack Power: " + attackPower + "Alive?: " + isAlive;
     }
 
@@ -70,7 +70,7 @@ public class Character {
 
         Item potion = new Item("Potion", 20);
 
-        boolean Fight(Enemy){
+        static boolean Fight(Enemy){
             Random randI = new Random();
             int myRandInt = randI.nextInt(20);
             if (myRandInt <=10){
@@ -89,7 +89,7 @@ public class Character {
             }
             return true;
         }
-        void useItem(int slot){
+        static void useItem(int slot){
             if(inventory[slot] != null) {
                 System.out.println("A " + Item.getItemName() + " healed " + name + " " + Item.getHealingPower());
                 health += Item.getHealingPower();
@@ -98,7 +98,7 @@ public class Character {
                 System.out.println("There is nothing in that slot!");
             }
         }
-        void levelUp(){
+        static void levelUp(){
             if(experience<=100){
                 level+=1;
                 experience=0;
@@ -141,12 +141,17 @@ public class Character {
     }
 
 public class Boss extends Enemy {
-    int ultrasLeft = 3;
+    static int ultrasLeft = 3;
     Boss(String n, double h, double ap, boolean ia, int mp, int ul){
         super(name, health, attackPower, isAlive, magicPower);
         name = "Final Boss";
         }
-        boolean Fight(Hero){
+
+    public static boolean Fight(Hero hero) {
+        return false;
+    }
+
+    static boolean Fight(Hero){
             Random randI = new Random();
             int myRandInt = randI.nextInt(20);
             if (myRandInt <=10){
