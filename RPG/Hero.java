@@ -47,7 +47,7 @@ public class Hero extends Character {
     }
 
     boolean levelUp() {
-        if (experience <= 100) {
+        if (experience >= 100) {
             level += 1;
             experience = 0;
             attackPower = attackPower + (attackPower / 10);
