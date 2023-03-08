@@ -1,6 +1,6 @@
 public class World {
     String gameName = "Earth";
-    String publisher;
+    String publisher = "Brett & Nico";
 
     public String getGameName() {
         return gameName;

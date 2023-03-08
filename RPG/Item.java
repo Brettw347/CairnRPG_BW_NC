@@ -1,6 +1,6 @@
 public class Item {
-    String itemName = "";
-    int healingPower = 0;
+    static String itemName = "";
+    static int healingPower = 0;
 
     Item(String i, int h){
         this.itemName = i;
@@ -10,7 +10,7 @@ public class Item {
         return "Item name: " + itemName + "Healing Power: " + healingPower;
     }
 
-    public String getItemName() {
+    public static String getItemName() {
         return itemName;
     }
 
@@ -18,7 +18,7 @@ public class Item {
         this.itemName = itemName;
     }
 
-    public int getHealingPower() {
+    public static int getHealingPower() {
         return healingPower;
     }
 
