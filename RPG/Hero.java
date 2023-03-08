@@ -1,11 +1,12 @@
 package RPG;
 import java.util.Random;
-public class Hero extends Character {
-    Hero(float health, float attackPower, boolean isAlive) {
-        super();
+public class Hero extends RPG.Character {
+    Hero(String name, float health, float attackPower, boolean isAlive) {
+        super(name, health, attackPower, isAlive);
+        this.name = "David the Hero";
     }
 
-    String name = "David the Hero";
+
     int level = 1;
     int experience = 0;
     double money = 0.0;
