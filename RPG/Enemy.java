@@ -7,7 +7,7 @@ public class Enemy extends Character {
         name = "Goblin";
     }
 
-    boolean Fight() {
+    static boolean Fight() {
         Random randI = new Random();
         int myRandInt = randI.nextInt(20);
         if (myRandInt <= 10) {

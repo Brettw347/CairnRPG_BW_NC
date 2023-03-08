@@ -11,7 +11,7 @@ class CharacterTest {
     void FightTest1(){
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
         Enemy enemy = new Enemy("Enemy", 100, 30, true, 30);
-        assertEquals(true, Fight(enemy));
+        assertEquals(true, Hero.Fight(enemy));
     }
 
     @Test
@@ -19,7 +19,7 @@ class CharacterTest {
     void useItemTest1(){
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
         Enemy enemy = new Enemy("Enemy", 100, 30, true, 30);
-        assertEquals(0, useItem(0));
+        assertEquals(0, Hero.useItem(0));
 
     }
 
@@ -27,34 +27,34 @@ class CharacterTest {
     @DisplayName("Hero has enough experience to level up")
     void levelUpTest1(){
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
-        assertEquals(true, levelUp());
+        assertEquals(true, Hero.levelUp());
     }
 
     @Test
     @DisplayName("Hero does not have enough experience to level up")
     void levelUpTest2(){
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
-        assertEquals(false, levelUp());
+        assertEquals(false, Hero.levelUp());
     }
 
     @Test
     @DisplayName("Normal addToInventory")
     void addToInventoryTest1(){
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
-        assertEquals(true, addToInventory(0));
+        assertEquals(true, Hero.addToInventory("Potion"));
     }
 
     @Test
     @DisplayName("Normal showInventory")
     void showInventoryTest1(){
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
-        assertEquals("Potion, Potion", showInventory());
+        assertEquals("Potion, Potion", Hero.showInventory());
     }
     @Test
     @DisplayName("Display Hero Info")
     void InfoTest1(){
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
-        assertEquals("Hero, 100, 10, true", hero.Info());
+        assertEquals("Hero, 100, 10, true", Hero.Info());
     }
 
     //Enemy Class Unit Tests
@@ -63,13 +63,13 @@ class CharacterTest {
     void enemyFightTest1(){
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
         Enemy enemy = new Enemy("Enemy", 100, 30, true, 30);
-        assertEquals(true, enemy.Fight(hero));
+        assertEquals(true, Enemy.Fight(hero));
     }
     @Test
     @DisplayName("Display Enemy Info")
     void enemyInfoTest1(){
         Enemy enemy = new Enemy("Enemy", 100, 30, true, 30);
-        assertEquals("Enemy, 100, 10, 30, true", enemy.Info());
+        assertEquals("Enemy, 100, 10, 30, true", Enemy.Info());
     }
 
     //Boss Class Unit Test
@@ -78,14 +78,14 @@ class CharacterTest {
     void bossFightTest1(){
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
         Boss boss = new Boss("Final Boss", 100, 10, true, 30,3);
-        assertEquals(true, boss.Fight(hero));
+        assertEquals(true, Boss.Fight(hero));
     }
 
     @Test
     @DisplayName("Display Boss Info")
     void bossInfoTest1(){
         Boss boss = new Boss("Final Boss", 100, 10, true, 30,3);
-        assertEquals("Boss, 100, 10, 30, 3, true", boss.Info());
+        assertEquals("Boss, 100, 10, 30, 3, true", Boss.Info());
     }
 
 }
