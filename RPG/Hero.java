@@ -75,4 +75,10 @@ public class Hero extends RPG.Character {
         return inventoryToShow;
     }
 
+    String info(){
+        return "This class encompasses the player's character. The class Hero is a child of\n " +
+                "the character class and carries out all the actions of the player.\n " +
+                "These actions range from fighting, to using potions, and so on.\n ";
+    }
+
 }

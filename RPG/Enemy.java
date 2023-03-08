@@ -30,4 +30,11 @@ public class Enemy extends RPG.Character {
         return true;
     }
 
+    String info(){
+        return "This class encompasses an enemy that the player fights. The class Enemy is a child of\n " +
+                "the character class and carries out the fighting action of the enemies.\n " +
+                "The enemy has a similar fighting method as the hero.\n " +
+                "The enemy also acts as the parent for the Boss class.";
+    }
+
 }

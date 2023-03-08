@@ -33,4 +33,10 @@ public class Boss extends RPG.Enemy{
         return true;
     }
 
+    String info(){
+        return "This class encompasses the Boss character. The Boss class is a child of\n " +
+                "the Enemy class and carries out all the fighting actions of the Boss.\n " +
+                "The fight method acts similarly to that of the Enemy and Hero.\n ";
+    }
+
 }
