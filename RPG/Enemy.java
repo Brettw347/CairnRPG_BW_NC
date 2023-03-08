@@ -1,8 +1,8 @@
 import java.util.Random;
 
 public class Enemy extends RPG.Character {
-    Enemy(float health, float attackPower, boolean isAlive) {
-        super(health, attackPower, isAlive);
+    Enemy(int h, int ap, boolean ia) {
+        super("Main enemy", h, ap, ia);
         String name = "Goblin";
     }
     int magicPower = 30;
@@ -10,7 +10,7 @@ public class Enemy extends RPG.Character {
     Enemy(String n, int h, int ap, boolean ia){
         super(n, h, ap, ia);
     }
-    boolean Fight(Enemy){
+    boolean Fight(){
         Random randI = new Random();
         int myRandInt = randI.nextInt(20);
         if (myRandInt <=10){

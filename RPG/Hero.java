@@ -1,9 +1,8 @@
 package RPG;
 import java.util.Random;
 public class Hero extends RPG.Character {
-    Hero(String name, float health, float attackPower, boolean isAlive) {
-        super(name, health, attackPower, isAlive);
-        this.name = "David the Hero";
+    Hero(int h, int ap, boolean ia) {
+        super("David the Hero", h, ap, ia);
     }
 
 
