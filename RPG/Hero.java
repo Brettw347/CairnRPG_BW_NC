@@ -7,9 +7,12 @@ public class Hero extends Character {
     static String[] inventory = new String[5];
 
 
-    public Hero(String n, double h, double ap, boolean ia, int l, int e, double m, String[] inv) {
+    public Hero(String name, double health, double attackPower, boolean isAlive , int l, int e, double m, String[] inv) {
         super(name, health, attackPower, isAlive);
-        name = "David the Hero";
+        this.level = l;
+        this.experience = e;
+        this.money = m;
+        this.inventory = inv;
     }
 
     Item potion = new Item("Potion", 20);

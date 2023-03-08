@@ -2,20 +2,20 @@ import java.util.Random;
 
 public class Enemy extends Character {
     int magicPower = 30;
-    Enemy(String n, double h, double ap, boolean ia, int mp) {
+    Enemy(String name, double health, double attackPower, boolean isAlive, int mp) {
         super(name, health, attackPower, isAlive);
-        name = "Goblin";
+        this.magicPower = mp;
     }
 
-    static boolean Fight(Hero h) {
+    boolean Fight(Hero h) {
         Random randI = new Random();
         int myRandInt = randI.nextInt(20);
         if (myRandInt <= 10) {
-            Hero.health -= attackPower;
+            h.health -= attackPower;
             System.out.println(name + " attacked you for " + attackPower + " damage!");
             return true;
         } else if (myRandInt > 10) {
-            Hero.health -= magicPower;
+            h.health -= magicPower;
             System.out.println(name + " landed a magic attack on you for " + magicPower + " damage!");
             return true;
         } else if (myRandInt > 18) {
