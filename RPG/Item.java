@@ -1,5 +1,3 @@
-package RPG;
-
 public class Item {
     String itemName = "";
     int healingPower = 0;
