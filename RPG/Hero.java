@@ -4,6 +4,8 @@ public class Hero extends Character {
     Hero(float health, float attackPower, boolean isAlive) {
         super();
     }
+
+    String name = "David the Hero";
     int level = 1;
     int experience = 0;
     double money = 0.0;
