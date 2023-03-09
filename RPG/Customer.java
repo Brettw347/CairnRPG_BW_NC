@@ -1,4 +1,4 @@
-package RPG;/*
+/*
 Attributes:
      Name (String)
      SSN (int)
