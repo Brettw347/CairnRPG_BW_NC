@@ -45,14 +45,14 @@ class HeroTest {
     }
 
     @Test
-    @DisplayName("levelUp with not enouogh experience to level up")
+    @DisplayName("levelUp with not enough experience to level up")
     void levelUpTest2() {
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
         assertEquals(false, hero.levelUp());
     }
 
     @Test
-    @DisplayName("levelUp with higher leve, health, and attack power values")
+    @DisplayName("levelUp with higher level, health, and attack power values")
     void levelUpTest3() {
         Hero hero = new Hero("Hero", 110, 11, true, 2, 100,0.0, new String[]{"Potion"});
         assertEquals(true, hero.levelUp());
@@ -66,7 +66,7 @@ class HeroTest {
     }
 
     @Test
-    @DisplayName("addToInvetory with full inventory")
+    @DisplayName("addToInventory with full inventory; only works with 6 items in inventory when limit should be 5")
     void addToInventoryTest2() {
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion", "Potion", "Potion", "Potion", "Potion", "Potion"});
         assertEquals(false, hero.addToInventory("Potion"));
@@ -90,6 +90,8 @@ class HeroTest {
     @DisplayName("Normal info method")
     void infoTest1() {
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
-        assertEquals(true, hero.info());
+        assertEquals("Name: " + "Hero" + "\n" + "Health: " + "100" + "\n" + "Attack Power: " + "10" + "\n" +
+                "Alive: " + "true" + "\n" + "Level: " + "1" + "\n" + "Experience: " + "0" + "\n" + "Money: " + "0.0" +
+                "\n" + "Inventory: " + "Potion" + "\n", hero.info());
     }
 }

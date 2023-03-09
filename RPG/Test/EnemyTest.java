@@ -23,6 +23,8 @@ class EnemyTest {
     @Test
     @DisplayName("Normal info method")
     void testInfo1() {
+        Enemy enemy = new Enemy("Enemy", 100, 10,true,30);
+        assertEquals("Name: " + "Enemy" + "\n" + "Health: " + "100" + "\n" + "Attack Power: " + "10" + "\n" + "Alive: " +
+                "true" + "\n" + "Magic Power: " + "30" + "\n", enemy.info());
     }
-
 }

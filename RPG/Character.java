@@ -1,9 +1,9 @@
 import java.util.Random;
 public class Character {
-    String name = "Character";
-    double health = 100;
-    double attackPower = 10;
-    boolean isAlive = true;
+    static String name = "Character";
+    static double health = 100;
+    static double attackPower = 10;
+    static boolean isAlive = true;
 
     Character(String n, double h, double ap, boolean ia) {
         this.name = n;
@@ -21,8 +21,9 @@ public class Character {
             return false;
     }
 
-    String Info() {
-        return "Character Name: " + name + "Health: " + health + "Attack Power: " + attackPower + "Alive?: " + isAlive;
+    static String info() {
+        return "Character Name: " + Character.name + "\n" + "Health: " +
+                health + "\n" + "Attack Power: " + attackPower + "\n" + "Alive: " + isAlive;
     }
 
     public String getName() {
