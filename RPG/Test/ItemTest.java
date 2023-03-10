@@ -9,4 +9,10 @@ class ItemTest {
         Item i = new Item("Potion ", 15);
         assertEquals("Item name: Potion Healing Power: 15", i.Info());
     }
+
+    @Test
+    void info2() {
+        Item i = new Item("Apple ", 30);
+        assertEquals("Item name: Apple Healing Power: 30", i.Info());
+    }
 }
