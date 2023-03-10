@@ -23,10 +23,16 @@ public class Hero extends Character {
         if (myRandInt <= 10) {
             e.health -= attackPower;
             System.out.println("You attacked " + e.name + " for " + attackPower + " damage!");
+            if (e.health <= 0){
+                e.isAlive = false;
+            }
             return true;
         } else if (myRandInt > 10) {
             e.health -= (attackPower * 3);
             System.out.println("You landed a special attack on " + e.name + " for " + attackPower * 3 + " damage!");
+            if (e.health <= 0){
+                e.isAlive = false;
+            }
             return true;
         } else if (myRandInt > 18) {
             System.out.println("Your attack missed!");
@@ -75,7 +81,7 @@ public class Hero extends Character {
 
     String showInventory() {
         String inventoryToShow = "Inventory:\n";
-        for (int i = 0; i <= inventory.length; i++) {
+        for (int i = 0; i < inventory.length; i++) {
             if (inventory[i] != null) {
                 inventoryToShow = inventoryToShow + inventory[i] + "\n";
             }

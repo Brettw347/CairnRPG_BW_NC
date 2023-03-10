@@ -16,11 +16,17 @@ public class Boss extends Enemy {
         if (myRandInt <= 10) {
             h.health -= attackPower;
             System.out.println(name + " attacked you for " + attackPower + " damage!");
+            if (h.health <= 0){
+                h.isAlive = false;
+            }
             return true;
         } else if (myRandInt > 10) {
             if (ultrasLeft > 0) {
                 h.health -= (attackPower * 3);
                 System.out.println(name + " landed a magic attack on you for " + magicPower + " damage!");
+                if (h.health <= 0){
+                    h.isAlive = false;
+                }
                 return true;
             } else {
                 System.out.println("Enemy attack missed!");
