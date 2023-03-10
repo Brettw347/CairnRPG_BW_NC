@@ -3,10 +3,6 @@ public class World {
     String publisher = "Brett & Nico";
 
 
-    public String Info(){
-        return "The World class creates the environment for the user by establishing " +
-                "a game name and being able to provide information about the publishers.";
-    }
     public String getGameName() {
         return gameName;
     }
