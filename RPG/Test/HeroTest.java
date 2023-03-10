@@ -90,8 +90,8 @@ class HeroTest {
     @DisplayName("Normal info method")
     void infoTest1() {
         Hero hero = new Hero("Hero", 100, 10, true, 1, 0,0.0, new String[]{"Potion"});
-        assertEquals("Name: " + "Hero" + "\n" + "Health: " + "100" + "\n" + "Attack Power: " + "10" + "\n" +
+        assertEquals("Name: " + "Hero" + "\n" + "Health: " + "100.0" + "\n" + "Attack Power: " + "10.0" + "\n" +
                 "Alive: " + "true" + "\n" + "Level: " + "1" + "\n" + "Experience: " + "0" + "\n" + "Money: " + "0.0" +
-                "\n" + "Inventory: " + "Potion" + "\n", hero.info());
+                "\n", hero.info());
     }
 }

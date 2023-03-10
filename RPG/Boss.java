@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Boss extends Enemy {
-    int ultrasLeft = 3;
+    static int ultrasLeft = 3;
 
 
     Boss(String name, double health, double attackPower, boolean isAlive, int magicPower, int ul) {
@@ -40,8 +40,6 @@ public class Boss extends Enemy {
     }
 
     static String info() {
-        return "This class encompasses the Boss character. The Boss class is a child of\n " +
-                "the Enemy class and carries out all the fighting actions of the Boss.\n " +
-                "The fight method acts similarly to that of the Enemy and Hero.\n ";
+        return "Name: "+name+"\n"+"Health: "+health+"\n"+"Attack Power: "+attackPower+"\n"+"Alive: "+isAlive+"\n"+"Magic Power: "+magicPower+"\n"+"Ultras Left: "+ultrasLeft+"\n";
     }
 }

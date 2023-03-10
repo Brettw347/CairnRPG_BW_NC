@@ -90,9 +90,7 @@ public class Hero extends Character {
     }
 
     static String info() {
-        return "This class encompasses the player's character. The class Hero is a child of\n " +
-                "the character class and carries out all the actions of the player.\n " +
-                "These actions range from fighting, to using potions, and so on.\n ";
+        return "Name: "+name+"\n"+"Health: "+health+"\n"+"Attack Power: "+attackPower+"\n"+"Alive: "+isAlive+"\n"+"Level: "+level+"\n"+"Experience: "+experience+"\n"+"Money: "+money+"\n";
     }
 
 }

@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Enemy extends Character {
-    int magicPower = 30;
+    static int magicPower = 30;
     Enemy(String name, double health, double attackPower, boolean isAlive, int mp) {
         super(name, health, attackPower, isAlive);
         this.magicPower = mp;
@@ -32,9 +32,6 @@ public class Enemy extends Character {
     }
 
     static String info() {
-        return "This class encompasses an enemy that the player fights. The class Enemy is a child of\n " +
-                "the character class and carries out the fighting action of the enemies.\n " +
-                "The enemy has a similar fighting method as the hero.\n " +
-                "The enemy also acts as the parent for the Boss class.";
+        return "Name: "+name+"\n"+"Health: "+health+"\n"+"Attack Power: "+attackPower+"\n"+"Alive: "+isAlive+"\n"+"Magic Power: "+magicPower+"\n";
     }
 }

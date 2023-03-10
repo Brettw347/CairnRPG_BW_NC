@@ -25,7 +25,7 @@ class BossTest {
     @DisplayName("Normal info method")
     void TestInfo1() {
         Boss boss = new Boss("Boss", 100, 10,true,30, 3);
-        assertEquals("Name: " + "Boss" + "\n" + "Health: " + "100" + "\n" + "Attack Power: " + "10" + "\n" + "Alive: " +
+        assertEquals("Name: " + "Boss" + "\n" + "Health: " + "100.0" + "\n" + "Attack Power: " + "10.0" + "\n" + "Alive: " +
                 "true" + "\n" + "Magic Power: " + "30" + "\n" + "Ultras Left: " + "3" + "\n", boss.info());
     }
 }
